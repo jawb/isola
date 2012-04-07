@@ -1,0 +1,13 @@
+gcc -c main.c -o ./obj/main.o `sdl-config --cflags --libs` -lSDL_image -lSDL_ttf -lSDL_mixer
+gcc -c methods.c -o ./obj/methods.o `sdl-config --cflags --libs` -lSDL_image -lSDL_ttf -lSDL_mixer
+gcc -c draw.c -o ./obj/draw.o `sdl-config --cflags --libs` -lSDL_image -lSDL_ttf -lSDL_mixer
+gcc -c event.c -o ./obj/event.o `sdl-config --cflags --libs` -lSDL_image -lSDL_ttf -lSDL_mixer
+gcc -c save.c -o ./obj/save.o `sdl-config --cflags --libs` -lSDL_image -lSDL_ttf -lSDL_mixer
+gcc ./obj/main.o ./obj/methods.o ./obj/draw.o ./obj/event.o ./obj/save.o -o main `sdl-config --cflags --libs` -lSDL_image -lSDL_ttf -lSDL_mixer
+
+gcc -g -c main.c -o ./Debug/main.o `sdl-config --cflags --libs` -lSDL_image -lSDL_ttf -lSDL_mixer
+gcc -g -c methods.c -o ./Debug/methods.o `sdl-config --cflags --libs` -lSDL_image -lSDL_ttf -lSDL_mixer
+gcc -g -c draw.c -o ./Debug/draw.o `sdl-config --cflags --libs` -lSDL_image -lSDL_ttf -lSDL_mixer
+gcc -g -c event.c -o ./Debug/event.o `sdl-config --cflags --libs` -lSDL_image -lSDL_ttf -lSDL_mixer
+gcc -g -c save.c -o ./Debug/save.o `sdl-config --cflags --libs` -lSDL_image -lSDL_ttf -lSDL_mixer
+gcc -g ./Debug/main.o ./Debug/methods.o ./Debug/draw.o ./Debug/event.o ./Debug/save.o -o ./Debug/main `sdl-config --cflags --libs` -lSDL_image -lSDL_ttf -lSDL_mixer
